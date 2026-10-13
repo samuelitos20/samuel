@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title> formularios2.42</title>
+</head>
+
+<body>
+    <form action="mailto:samuel" method="post">
+        <fieldset>
+            <legend>Personaje</legend>
+            <label> Superhéroe favorito:</label>
+            <input list="superheroes" name="superheroes" placeholder="elige superheroe">
+            <datalist id="superheroes">
+                <option label="Iron man">Iron man</option>
+                <option label="The hulk">The hulk</option>
+            </datalist>
+            <br><br>
+            <label>Color:</label>
+            <input name="Color" type="color" />
+        </fieldset>
+        <fieldset>
+            <legend>Datos de contacto</legend>
+            <label>Nombre:</label>
+            <input type="text" name="samuel">
+            <br>
+            <br>
+            <label>Telefono:</label>
+            <input type="text" name="samuel">
+
+            <br><br>
+
+            <label>Fecha:</label>
+            <input type="month" name="mes">
+            <br>
+            <br>
+             <label>Contraseña:</label>
+            <input type="text" name="samuel">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Selecciona forma de contacto preferida</legend>
+            <input type="radio" name="contacto" value="email">
+            <label>Email</label>
+            <input type="radio" name="contacto" value="telefono">
+            <label>Teléfono</label>
+            <input type="radio" name="contacto" value="carta">
+            <label>Carta</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Elige tus asignaturas favoritas</legend>
+            <input type="checkbox" name="asignaturas" value="aplicaciones">
+            <label>Aplicaciones web</label>
+            <br>
+            <input type="checkbox" name="asignaturas" value="seguridad">
+            <label>Seguridad informática</label>
+        </fieldset>
+
+        <br><br>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Resetear">
+
+    </form>
+</body>
+
+</html>
