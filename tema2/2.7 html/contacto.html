@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-    <title> Cv samuel diaz</title>
-    <link rel="icon" type="image/svg+xml" href="imagenes/favicon.ico" />
+    <meta charset="UTF-8">
+    <title>Contacto Samuel Diaz</title>
+    <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico">
+
     <style>
         * {
             box-sizing: border-box;
@@ -53,42 +56,42 @@
             border-radius: 10px;
         }
 
-        .galeria {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
-        }
-
-        figure {
-            margin: 0;
-        }
-
-        figure img {
-            width: 100%;
-            height: 170px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        figcaption {
-            font-size: .9rem;
-            color: #526174;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
+        fieldset {
             border: 1px solid #ccd5df;
-            padding: 10px;
-            text-align: left;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 20px;
         }
 
-        th {
-            background: #e7eef6;
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccd5df;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: auto;
+            padding: 12px 20px;
+            background: #244d78;
+            color: white;
+            cursor: pointer;
+            margin-right: 10px;
         }
 
         footer {
@@ -100,29 +103,113 @@
 </head>
 
 <body>
+
     <header>
-        <h1>Cv Samuel Diaz</h1>
-        <img src="/tema2/favicon.ico" alt="cr7">
+        <h1>Contacto profesional</h1>
     </header>
+
     <nav>
-        <a href="#">Inicio</a>
+        <a href="index.html">Inicio</a>
         <a href="aficiones.html">Aficiones</a>
         <a href="contacto.html">Contacto</a>
     </nav>
+
     <main>
-        <!-- presentacion personal-->
-        <section>
-            <h2></h2>
-        </section>
-        <!-- formacion academica -->
-        </section>
-
-        </section>
-        <!-- habilidades y competencias-->
-        </section>
 
         <section>
+            <h2>Formulario de contacto</h2>
+
+            <p>Si estás interesado en mi perfil profesional, puedes contactar conmigo mediante este formulario.</p>
+
+            <form>
+
+                <!-- Datos personales -->
+                <fieldset>
+
+                    <legend>Datos de contacto</legend>
+
+                    <label for="nombre">Nombre y apellidos:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono">
+
+                    <label for="fecha">Fecha de disponibilidad:</label>
+                    <input type="date" id="fecha" name="fecha">
+
+                    <label for="cv">Adjuntar CV en PDF:</label>
+                    <input type="file" id="cv" name="cv" accept=".pdf">
+
+                </fieldset>
+
+                <!-- Motivo del contacto -->
+                <fieldset>
+
+                    <legend>Motivo del contacto</legend>
+
+                    <label for="motivo">Selecciona el motivo:</label>
+
+                    <select id="motivo" name="motivo">
+                        <option>Oferta de prácticas</option>
+                        <option>Oferta de empleo</option>
+                        <option>Solicitud de información</option>
+                        <option>Entrevista</option>
+                        <option>Otros motivos</option>
+                    </select>
+
+                    <label for="area">Área profesional de interés:</label>
+
+                    <input list="areas" id="area" name="area">
+
+                    <datalist id="areas">
+                        <option value="Administración de sistemas">
+                        <option value="Redes informáticas">
+                        <option value="Desarrollo web">
+                        <option value="Ciberseguridad">
+                        <option value="Soporte técnico">
+                    </datalist>
+
+                    <p>Medio de contacto preferido:</p>
+
+                    <label>
+                        <input type="radio" name="contacto" value="correo">
+                        Correo electrónico
+                    </label>
+
+                    <label>
+                        <input type="radio" name="contacto" value="telefono">
+                        Teléfono
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="autorizacion" required>
+                        Autorizo que se utilicen mis datos para responder a esta solicitud.
+                    </label>
+
+                    <label for="mensaje">Mensaje:</label>
+
+                    <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+
+                </fieldset>
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
+
+            </form>
+
+        </section>
+
     </main>
 
+    <footer>
+        <p>Contacto de Samuel Diaz</p>
+
+        <a href="index.html">Volver al CV</a> |
+        <a href="aficiones.html">Volver a aficiones</a>
+    </footer>
+
 </body>
-<html>
+</html>
